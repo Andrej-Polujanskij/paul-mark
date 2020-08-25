@@ -1,0 +1,56 @@
+ @import "inputs";
+ @import "loader";
+ @import "404";
+
+ // Image left and text right with black background
+.info-below_section{
+  padding-top: 5rem;
+  display: flex;
+  .info-below-left{
+    width: calc(50% - 223px);
+    .info-below-left_img{
+      background: no-repeat scroll center center;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+  .info-below-right{
+    width: calc(50% + 223px);
+    background-color: $mainBlack;
+    .info-below-right_content{
+      padding: 5rem;
+      max-width: 906px;
+      padding-right: 82px;
+      p{
+        @extend %p-style;
+        color: $darkWhite;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px){
+  .info-below_section .info-below-left {
+    width: calc(50% - 180px);
+  }
+  .info-below_section .info-below-right {
+    width: calc(50% + 180px);
+  }
+  .info-below_section .info-below-right .info-below-right_content{
+    padding-right: 45px;
+  }
+}
+@media all and (max-width: 800px){
+  .info-below_section{
+    flex-direction: column;
+  }
+  .info-below_section .info-below-left{
+    width: 100%;
+  }
+  .info-below_section .info-below-left .info-below-left_img{
+    height: 320px;
+  }
+  .info-below_section .info-below-right{
+    width: 100%;
+  }
+}

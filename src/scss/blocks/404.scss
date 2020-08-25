@@ -1,0 +1,25 @@
+.page_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+height: 70vh;
+  h4 {
+    @extend %h4-style;
+    font-size: 2rem;
+  }
+  .back_btn {
+    margin: 6.6rem auto;
+    a {
+      font-size: 1.5rem;
+      border: 1px solid $redOrange;
+      padding: 1rem 3rem;
+      font-weight: bold;
+      transition: ease-in-out 0.5s;
+      color: white;
+      background-color: $redOrange;
+      text-transform: uppercase;
+      border-radius: 5px;
+    }
+  }
+}

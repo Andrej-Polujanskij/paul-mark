@@ -1,0 +1,108 @@
+.input_block{
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.inputText:focus + .floating-label, .inputText:not(:placeholder-shown) + .floating-label{
+  top: 6px;
+  bottom: 10px;
+  left: 10px;
+  font-size: 11px;
+  color: $mainBlack;
+}
+.inputText:focus,
+.inputText:not(:placeholder-shown) {
+  border: 1px solid #706d6b;
+  background-color: #ffffff;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.inputText {
+  @extend %p-style;
+  color: $mainBlack;
+  height: 52px;
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+  background-color: #ffffff;
+  padding: 24px 0 6px 10px;
+  width: 100%;
+  transition: 0.2s ease all;
+  outline: none;
+  font-size: 16px;
+}
+textarea.inputText{
+  resize: none;
+  min-height: 13.9rem;
+  -webkit-appearance: none;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 14px;
+  transition: 0.2s ease all;
+  @extend %p-style;
+  color: $darkWhite;
+}
+
+.input_chekbox{
+  margin: 2rem 0 2.5rem 0;
+  label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    input{
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      border:none;
+    }
+    .checked{
+      background-color: $redOrange;
+    }
+  }
+
+  .checkbox-dot{
+    display: inline-block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #c2b9ac;
+    border: 2px solid #c2b9ac;
+    margin-right: 1.5rem;
+    transition: 0.2s ease all;
+  }
+  .p_policy-note{
+    @extend %p-style;
+    a{
+      text-decoration: underline!important;
+      color: $mainBlack;
+    }
+  }
+}
+
+
+.input_block{
+  button{
+    @extend %h4-style;
+    padding: 8px 31px;
+    background-color: $redOrange;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    &:hover{
+      color: $redOrange;
+      background-color: transparent;
+      border: 2px solid $redOrange;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+header{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  position: relative;
+  z-index: 6;
+}
+
+.main-container {
+  @extend %mainContainer;
+
+    .header-content {
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+
+      .head-logo{
+        flex: 1 1 auto;
+        a{
+          width: max-content;
+          display: block;
+        }
+      }
+    }
+  }
+      .head-contact{
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+        .head-contact_icon{
+          background: no-repeat scroll center center;
+          height: 44px;
+          width: 44px;
+        }
+        .head-contact_number a{
+          color: $mainBlack;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 2.2rem;
+          text-transform: uppercase;
+          padding-left: 2rem;
+          transition: .3s;
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+ 
+  .head-nav nav ul {
+    display: flex;
+
+    li {
+      &:hover a:after{
+        width: 100%;
+        left: 0;
+        background-color: #ccc;
+        right: auto;
+      }
+    a {
+      color: $mainBlack;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.2rem;
+      padding-bottom: 1rem;
+      margin: 0 2rem;
+      border-bottom: 2px solid transparent;
+      position: relative;
+      &:after{
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        width: 0;
+        background-color: #ccc;
+        content: "";
+        border-radius: 5px;
+        transition: .3s;
+      }
+    }
+    &.current_page_item a{
+      border-bottom: 2px solid $redOrange;
+      color: $redOrange;
+    }
+  }
+  }
+
+  @media all and (max-width: 800px){
+    .main-container .header-content .head-logo a{
+      width: 90%;
+    }
+  }
+  @media (max-width: 550px){
+    .main-container .header-content .head-logo a {
+      width: 80%;
+    }
+  }
+  @media all and (max-width: 450px){
+      .main-container .header-content .head-logo a {
+        width: 75%;
+    }
+  }
+  @media all and (max-width: 375px){
+      .main-container .header-content .head-logo a {
+        width: 70%;
+    }
+  }
+

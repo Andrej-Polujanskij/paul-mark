@@ -1,0 +1,58 @@
+@import "helpers/helpers";
+@import "blocks/blocks";
+@import "pages/pages";
+@import "blocks/mobile-menu";
+
+html body * {
+  font-family: $font;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  @media all and (max-width: 900px){
+    font-size: 9px;
+  }
+}
+body{
+  overflow-x: hidden;
+}
+
+main {
+  min-height: calc(100vh - 101px - 52px);
+}
+
+.main-container {
+  @extend %mainContainer;
+}
+
+.wrapper {
+  display: flex;
+  .wrap-item {
+    width: 50%;
+    position: relative;
+    @media all and (max-width: 800px){
+      width: 100%;
+    }
+  }
+}
+.dot-line_decor{
+  background: no-repeat scroll center center;
+  height: 40px;
+  width: 230px;
+}
+
+.error-validation-class{
+  border-color: red!important;
+}
+.overflow-fidden{
+  overflow: hidden;
+}
+html.sr .load-hidden {
+  visibility: hidden;
+}
+.policy-content{
+  padding: 5rem 0;
+  @extend %p-style;
+}

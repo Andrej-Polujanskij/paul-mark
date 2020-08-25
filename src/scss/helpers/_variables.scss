@@ -1,0 +1,57 @@
+$mainBlack: #1c1b19;
+$white: #FFFFFF;
+$darkWhite: #c2b9ac;
+$grayBG: #f0f0f0;
+$redOrange: #e24723;
+$grey: #656260;
+
+//@extend
+%mainContainer {
+  max-width: 1366px;
+  padding: 0 82px;
+  margin: 0 auto;
+  @media all and (max-width: 1024px){
+    padding: 0 45px;
+  }
+  @media all and (max-width: 550px){
+    padding: 0 25px;
+  }
+  @media all and (max-width: 375px){
+    padding:0 10px;
+  }
+};
+
+%h2-style{
+  color: $redOrange;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  text-transform: uppercase;   
+  @media all and (max-width: 950px){
+    font-size: 2.4rem;
+  }
+  @media all and (max-width: 450px){
+      font-size: 20px;
+      line-height: 24px;
+  }
+}
+
+%h4-style{
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+}
+
+%p-style{
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+%list-style{
+  color: $white;
+  @extend %h4-style;
+  background-color: $redOrange;
+  padding: 1.4rem 1.8rem 1.4rem 1.8rem;
+  width: max-content;
+}
